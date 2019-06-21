@@ -1,0 +1,1 @@
+#projects of bash loops and conditions
