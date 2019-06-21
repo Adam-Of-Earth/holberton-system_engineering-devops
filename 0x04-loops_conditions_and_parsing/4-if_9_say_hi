@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# prints "hi" when counter at 9
+counter=0
+while [ $counter -lt 10 ]
+do
+	if [ $counter = 9 ]
+	then
+		echo "Hi"
+	fi
+	echo "Holberton School"
+	let counter+=1
+done
