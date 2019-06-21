@@ -1,2 +1,6 @@
 !#bin/bash
+<<<<<<< HEAD
 telnet towel.blinkenlights.nl
+=======
+telnet towel.blinkenlights.nl
+>>>>>>> 699aab60362b7ac10d51be49b9d353300e61d4ee
