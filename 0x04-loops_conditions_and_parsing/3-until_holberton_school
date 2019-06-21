@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#print 10X using until loop
+count=0
+until [ $count -eq 9 ]
+do
+	echo "Holberton School"
+	let count+=1
+done
