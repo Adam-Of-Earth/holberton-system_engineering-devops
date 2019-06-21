@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 #loop that prints holberton school 10X
-
 for _ in {0..9}; do
-    echo "Holberton Schoo"
+    echo "Holberton School"
 done

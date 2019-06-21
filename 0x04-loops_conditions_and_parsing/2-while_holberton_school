@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#while loop that prints 10X
+count=0
+while [ $count -lt 10 ];
+do
+	echo "Holberton School"
+	let count=count+1
+done
