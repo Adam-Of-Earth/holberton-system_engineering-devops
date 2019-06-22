@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+#prints message at 4 and 8
+counter=0
+while [ $counter -lt 10 ]
+do
+	if [ $counter = 3 ]
+	then
+		echo "bad luck"
+	elif [ $counter = 7 ]
+	then
+		echo "good luck"
+	else
+		echo "Holberton School"
+	fi
+	let counter+=1
+done
