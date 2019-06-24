@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# prints the PID of bash lines without ps
+pgrep -l bash
