@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#echo text to a socket
+
+nc -l localhost 98
