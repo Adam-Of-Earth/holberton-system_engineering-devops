@@ -2,8 +2,7 @@
 #Configure two servers
 apt-get -y update
 apt-get -y install nginx
-.host=$(hostname)
-customhttp="http {\n\ntadd_header X-Served-By $host;\n\n"
-sed -i "s,http {,$customhttp," /etc/nginx/nginx.conf
+sed -i "30 i, \\n\tadd_header X-Served-By $$HOSTNAME;\n" \
+    /etc/nginx/sites-available/default
 service nginx reload
 service nginx restart
