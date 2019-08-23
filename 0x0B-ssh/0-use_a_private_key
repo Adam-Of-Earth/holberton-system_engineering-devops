@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# logs into server using key
+ssh -i ~/.ssh/holberton ubuntu@35.196.61.182
