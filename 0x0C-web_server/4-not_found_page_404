@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# configures new server with redirect and nginx
+apt-get update
+apt-get -y install nginx
+touch /var/www/html/index.html
+redirect="root /var/www/html;\n\n\tlocation /redirect_me {\n\t\treturn\t301 https://www.youtube.com/watch?v=QH2-TGUlwu4/;\n\t}\n\n"
+echo "Holberton School" > '/var/www/html/index.html'
+echo "Cesi n'est pas une page" > /usr/share/nginx/html/404.html
+sed -i "s,root \/var\/www\/html;,$redirect," /etc/nginx/sites-enabled/default
+sed -i '45 i \\terror_page 404 /404.html;' /etc/nginx/sites-available/default
+sudo service nginx reload
+sudo service nginx restart
