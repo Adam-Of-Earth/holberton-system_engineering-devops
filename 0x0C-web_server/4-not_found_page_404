@@ -2,11 +2,10 @@
 # configures new server with redirect and nginx
 apt-get update
 apt-get -y install nginx
-404page="root /var/www/html;\n\n\terror_page 404 /404.html;\n\n"
+page="root /var/www/html;\n\n\terror_page 404 /404.html;\n\n"
 touch /var/www/html/index.html
 echo "Holberton School" > /var/www/html/index.html
 echo "Ceci n'est pas une page" > /usr/share/nginx/html/404.html
-sed -i "s,root \/var\/www\/html;,$redirect," /etc/nginx/sites-enabled/default
-sed -i "s,root \/var\/www\/html;,$404page," /etc/nginx/sites-enabled/default
+sed -i "s,root \/var\/www\/html;,$page," /etc/nginx/sites-enabled/default
 sudo service nginx reload
 sudo service nginx restart
