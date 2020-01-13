@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-#Configure two servers
-apt-get -y update
-apt-get -y install nginx
-sed -i "30 i, \\n\tadd_header X-Served-By $$HOSTNAME;\n" \
-    /etc/nginx/sites-available/default
-service nginx restart
